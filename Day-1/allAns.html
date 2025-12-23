@@ -1,0 +1,164 @@
+<!-- // 1. PRINT NUMBERS FROM 1 TO N. -->
+let n = 10;
+for(let i = 1; i<=10; i++){
+    console.log(i);
+}
+// ask N form the user.
+let n = prompt("Enter a number: ");
+for(let i=1; i<=n; i++){
+    console.log(i);
+}
+// convert in number
+let n = parseInt(prompt("Enter a number: "));
+console.log(n);
+for(let i=1; i<=n; i++){
+    console.log(i);
+}
+// input filed - btn click
+// html
+<label for="input">Enter a number</label>
+<br>
+<input type="number" name="input" id="input" class="input" placeholder="Enter a number">
+<br>
+<button class="btn">Generate</button>
+// js
+let input = document.querySelector(".input");
+let btn = document.querySelector(".btn");
+btn.addEventListener("click", () => {
+    let num = parseInt(input.value);
+    for(let i=1; i<=num; i++){
+        console.log(i);
+    }
+})
+
+
+
+
+<!-- // 2. PRINT NUMBERS FROM N - 1 WITHOUT CHANGING THE LOOP CONDITION OF ABOVE QUESTION -->
+const num = 10;
+// console.log(num);
+for (let i=1; i<=num; i++){
+    console.log((num-i)+1);
+}
+
+
+
+
+<!-- // 3. PRINT ALL EVEN NUMBERS FROM 1 - N. -->
+let n = 10;
+for(let i=1; i<=n; i++){
+    if(i%2==0){
+        console.log(i);
+    }
+}
+
+<!-- // 4. SUM OF FIRST N NATURAL NUMBERS. -->
+// brute - force = default: 6506.7880859375 ms
+console.time();
+let n = 1000000000;
+let sum = 0;
+for (let i=1; i<=n; i++){
+    sum = sum + i;
+}
+console.log(sum);
+console.timeEnd();
+// complexity - O(1)  = default: 0.06494140625 ms
+console.time();
+let n = 1000000000;
+let sum = n * (n+1) / 2;
+console.log(sum);
+console.timeEnd();
+
+<!-- // 5. PRODUCT (FACTORIAL) OF N. -->
+let n = 3;
+let f = 1;
+for(let i=1; i<=n; i++){
+    f = f * i;
+}
+console.log(f);
+// for large numbers
+console.time();
+const num = 5n;
+let fact = 1n;
+for(let i=1n; i<=num; i++){
+    fact *= i;
+}
+console.log(fact);
+console.timeEnd();
+
+// HTML
+<label for="input">FACTORIAL</label>
+<br>
+<input type="number" id="input" class="input" placeholder="enter a no.">
+<br>
+<button class="btn">Generate</button>
+
+// JS
+let input = document.querySelector(".input");
+let btn = document.querySelector(".btn");
+
+btn.addEventListener("click", () => {
+    let num = input.value;
+    if(num > 100000n){
+        alert("Enter a shorter number !")
+    }
+    else{
+        let factorial = 1n;
+        for(let i=1n; i<=num; i++){
+            factorial *= i;
+        }
+        console.log(factorial);
+    }
+})
+
+
+<!-- // 6. SUM OF ALL EVEN NUMBERS. -->
+let num = 10n;
+let sum = 0n;
+for(let i=1n; i<=num; i++){
+    if(i%2n === 0n){
+        sum += i;
+    }
+}
+console.log(i);
+
+
+<!-- // PRINT SQUARES OF NUMBERS FROM 1 - N. -->
+let num = 5n;
+let sq = 1n;
+for(let i=1; i<=num; i++){
+    sq = i ** 2;
+    console.log(sq);
+}
+
+
+<!-- HOME - WORK -->
+<!-- // PRINT ALL NUMBERS DIVISIBLE BY 3 & 5 UP TO N. -->
+let num = 30n;
+for(let i=1; i<=num; i++){
+    if(i%3 === 0  && i%5 === 0){
+        console.log(i);
+    }
+}
+
+
+<!-- // SUM OF ALL ODD NUMBERS UPTO N. -->
+let num = 10;
+let sum = 0;
+for(let i=1; i<=num; i++){
+    if(i%2 !== 0) {
+        sum += i;
+    }
+}
+console.log(sum);
+
+
+<!-- // CUBE NUMBERS UPTO N. -->
+let num = 5;
+for(let i=1; i<=num; i++){
+    console.log(i ** 3);
+}
+
+
+
+
