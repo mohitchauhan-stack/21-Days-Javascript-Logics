@@ -1,0 +1,45 @@
+<!-- // FIND THE MAXIMUM OF THREE NUMBERS -->
+let num1 = 10;
+let num2 = 20;
+let num3 = 5;
+if (num1 > num2 && num1 > num3){
+    console.log(num1);
+} else if(num2 > num1 && num2 > num3){
+    console.log(num2);
+} else{
+    console.log(num3);
+}
+<!-- // USING FUNCTIONS -->
+function maxOfThree( a, b, c){
+    let max;
+    if (a >= b && a >= c){
+        max = {a};
+    } else if(b >= c){
+        max = {b};
+    } else{
+        max = {c};
+    }
+    return max;
+}
+console.log(maxOfThree(30, 30, 20));;
+
+
+
+<!-- // CHECK IF A NUMBER IS POSITIVE OR NEGATIVE OR 0. -->
+function positiveNegativeOrZero(num) {
+    // console.log(num);
+    // if(num === Number.POSITIVE_INFINITY){
+    //     console.log(`${num} - POSITIVE`);
+    // }else if(num === 0){
+    //     console.log(`${num}`);
+    // } else{
+    //     console.log(`${num} - negative`);
+    // }
+    if(num > 0){
+        return 'POSITIVE'
+    } else if( num < 0){
+        return 'NEGATIVE'
+    }
+    return 'ZERO'
+}
+console.log(positiveNegativeOrZero(11));
